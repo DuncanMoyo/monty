@@ -9,12 +9,14 @@
 
 int main(int argc, char *argv[])
 {
+	const char *filename;
+
 	if (argc != 2)
 	{
-		fprintf(stderr. "USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		return (EXIT_FAILURE);
 	}
-	const char *filename = argv[1];
+	char *filename = argv[1];
 
 	read_data(filename);
 

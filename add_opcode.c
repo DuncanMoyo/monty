@@ -6,7 +6,7 @@
  * @line_number: line number of the current opcode
  */
 
-void add(stack_t **stack, unsinged int line_number)
+void add(stack_t **stack, unsigned int line_number)
 {
 	int top_value, next_value;
 	stack_t *top_element;
@@ -23,9 +23,9 @@ void add(stack_t **stack, unsinged int line_number)
 
 	(*stack)->next->n = top_value + next_value;
 
-	top_value = *stack;
+	top_element = *stack;
 	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
 
-	free(top_value);
+	free(top_element);
 }
